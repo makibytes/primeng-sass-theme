@@ -1,0 +1,22 @@
+{
+  "name": "primeng-theme-maki",
+  "version": "0.0.1",
+  "description": "Maki Theme for PrimeNg",
+  "main": "theme.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makibytes/primeng-sass-theme.git"
+  },
+  "keywords": [
+    "primeng"
+  ],
+  "author": "Maki Bytes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/makibytes/primeng-sass-theme/issues"
+  },
+  "homepage": "https://github.com/makibytes/primeng-sass-theme#readme"
+}
