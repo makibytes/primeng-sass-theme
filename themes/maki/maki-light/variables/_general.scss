@@ -1,6 +1,6 @@
 /// Font of the theme
 /// @group general
-$fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$fontFamily: BarlowRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /// Size of the font
 /// @group general
@@ -132,8 +132,8 @@ $actionIconBorderRadius: 50%;
 
 /// Scale factor of small component size
 /// @group general
-$scaleSM:0.875;
+$scaleSM: 0.875;
 
 /// Scale factor of small large size
 /// @group general
-$scaleLG:1.25;
+$scaleLG: 1.25;
