@@ -1,0 +1,23 @@
+name: CI-Release
+on:
+  push:
+    branches: [ "release" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://europe-west3-npm.pkg.dev/ityreh-prod/maki-npm/'
+          
+      - name: install sass and compile css
+        run: |
+          npm install -g sass
+          sass --update themes/maki/maki-light/theme.scss:package/theme.css
+
+      - name: package and deploy theme
+        run: |
+          ls -lart
