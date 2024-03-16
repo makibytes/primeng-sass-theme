@@ -17,10 +17,21 @@ jobs:
           npm install -g sass
           sass --update themes/maki/maki-light/theme.scss:package/theme.css
 
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+
+      - name: Authenticate to Google Cloud (if using workload identity pool)
+        if: ${{ env.WIF_PROVIDER != '' }}  # Skip if not using pool
+        uses: google-github-actions/auth@v1
+        with:
+          workload_identity_pool: ${{ env.WIF_PROVIDER }}
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: 'https://europe-west3-npm.pkg.dev/ityreh-prod/maki-npm/'
       - name: package and deploy theme
         run: |
-          ls -lart
+          cd ./package
+          npm run build
+          npm publish
