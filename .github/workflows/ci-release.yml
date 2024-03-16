@@ -20,12 +20,12 @@ jobs:
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Authenticate to Google Cloud (if using workload identity pool)
-        if: ${{ env.WIF_PROVIDER != '' }}  # Skip if not using pool
+      - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          workload_identity_pool: ${{ env.WIF_PROVIDER }}
-          credentials_json: ${{ env.WIF_SERVICE_ACCOUNT }}
+          token_format: 'access_token'
+          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
+          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
 
       - uses: actions/setup-node@v4
         with:
