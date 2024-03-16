@@ -23,14 +23,13 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          token_format: 'access_token'
           workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
-          credentials_json: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+          audience: "https://artifactregistry.googleapis.com/"
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: 'https://europe-west3-npm.pkg.dev/ityreh-prod/maki-npm/'
+          registry-url: 'https://europe-west3-npm.pkg.dev/prod-343209/maki-npm-repo'
       - name: package and deploy theme
         run: |
           cd ./package
