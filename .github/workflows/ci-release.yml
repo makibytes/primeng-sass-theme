@@ -33,5 +33,4 @@ jobs:
       - name: package and deploy theme
         run: |
           cd ./package
-          npm run build
           npm publish
