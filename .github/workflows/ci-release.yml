@@ -21,11 +21,11 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Authenticate to Google Cloud (if using workload identity pool)
-        if: ${{ secrets.WIF_PROVIDER != '' }}  # Skip if not using pool
+        if: ${{ env.WIF_PROVIDER != '' }}  # Skip if not using pool
         uses: google-github-actions/auth@v1
         with:
-          workload_identity_pool: ${{ secrets.WIF_PROVIDER }}
-          credentials_json: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+          workload_identity_pool: ${{ env.WIF_PROVIDER }}
+          credentials_json: ${{ env.WIF_SERVICE_ACCOUNT }}
 
       - uses: actions/setup-node@v4
         with:
