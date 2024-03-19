@@ -19,14 +19,10 @@ jobs:
           npm install -g sass
           sass --update themes/maki/maki-light/theme.scss:package/theme.css
 
-      - name: Login to GitHub Packages
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ secrets.GITHUB_REF }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_NPM_PUBLISH }}
-
       - name: package and deploy theme
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PAT_NPM_PUBLISH }}
         run: |
           cd ./package
           npm publish
+        
