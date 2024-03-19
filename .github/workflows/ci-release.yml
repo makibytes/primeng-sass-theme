@@ -1,7 +1,9 @@
 name: CI-Release
 on:
   push:
-    branches: [ "release" ]
+    branches: [ release ]
+  release:
+    types: [ published ]
   workflow_dispatch:
 jobs:
   build:
@@ -17,20 +19,13 @@ jobs:
           npm install -g sass
           sass --update themes/maki/maki-light/theme.scss:package/theme.css
 
-      - name: Set up Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v2
-
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v1
+      - name: Login to GitHub Packages
+        uses: actions/checkout@v4
         with:
-          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
-          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
-          audience: "https://artifactregistry.googleapis.com/"
+          ref: ${{ secrets.GITHUB_REF }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: 'https://europe-west3-npm.pkg.dev/prod-343209/maki-npm-repo'
       - name: package and deploy theme
         run: |
           cd ./package
