@@ -24,7 +24,7 @@ jobs:
         with:
           ref: ${{ secrets.GITHUB_REF }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_NPM_PUBLISH }}
 
       - name: package and deploy theme
         run: |
