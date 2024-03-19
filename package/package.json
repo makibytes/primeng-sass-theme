@@ -1,5 +1,5 @@
 {
-  "name": "primeng-theme-maki",
+  "name": "@maki/primeng-theme-maki",
   "version": "0.0.1",
   "description": "Maki Theme for PrimeNg",
   "main": "theme.css",
