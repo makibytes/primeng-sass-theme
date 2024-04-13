@@ -1,4 +1,55 @@
 # Changelog
+## [17.13.0](https://github.com/primefaces/primeng-sass-theme/tree/17.13.0) (2024-04-09)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.12.0...17.13.0)
+
+**Implemented New Features and Enhancements:**
+- New Theme | Aura [\#110](https://github.com/primefaces/primeng-sass-theme/issues/110)
+- Stepper [\#114](https://github.com/primefaces/primeng-sass-theme/issues/114)
+- Stepper: number element box-shadow defect [\#109](https://github.com/primefaces/primeng-sass-theme/issues/109)
+
+## [17.12.0](https://github.com/primefaces/primeng-sass-theme/tree/17.12.0) (2024-03-21)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.11.0...17.12.0)
+
+- No changes, provides semantic versioning compatibility for PrimeNG 17.12.0
+
+## [17.11.0](https://github.com/primefaces/primeng-sass-theme/tree/17.11.0) (2024-03-14)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.10.0...17.11.0)
+
+**Enhancements:**
+- InputOtp | add styles [\#104](https://github.com/primefaces/primeng-sass-theme/issues/104)
+
+## [17.10.0](https://github.com/primefaces/primeng-sass-theme/tree/17.10.0) (2024-03-07)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.9.0...17.10.0)
+
+- No changes, provides semantic versioning compatibility for PrimeNG 17.10.0
+
+## [17.9.0](https://github.com/primefaces/primeng-sass-theme/tree/17.9.0) (2024-02-29)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.8.0...17.9.0)
+
+**Implemented New Features and Enhancements:**
+- Add metergroup styles [\#99](https://github.com/primefaces/primeng-sass-theme/issues/99)
+- New Components | IconField & InputIcon [\#102](https://github.com/primefaces/primeng-sass-theme/issues/102)
+
+## [17.8.0](https://github.com/primefaces/primeng-sass-theme/tree/17.8.0) (2024-02-23)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.7.0...17.8.0)
+
+- No changes, provides semantic versioning compatibility for PrimeNG 17.8.0
+
+## [17.7.0](https://github.com/primefaces/primeng-sass-theme/tree/17.7.0) (2024-02-14)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.6.0...17.7.0)
+
+**Fixed bugs:**
+- AutoComplete | Add missing empty-message styles [\#98](https://github.com/primefaces/primeng-sass-theme/issues/98)
+
+## [17.6.0](https://github.com/primefaces/primeng-sass-theme/tree/17.6.0) (2024-02-07)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.5.0...17.6.0)
+
+- No changes, provides semantic versioning compatibility for PrimeNG 17.6.0
+
+## [17.5.0](https://github.com/primefaces/primeng-sass-theme/tree/17.5.0) (2024-02-01)
+[Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.4.0...17.5.0)
+
+- No changes, provides semantic versioning compatibility for PrimeNG 17.5.0
 
 ## [17.4.0](https://github.com/primefaces/primeng-sass-theme/tree/17.4.0) (2023-01-24)
 [Full Changelog](https://github.com/primefaces/primeng-sass-theme/compare/17.3.3...17.4.0)

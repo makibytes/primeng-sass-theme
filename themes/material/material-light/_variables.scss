@@ -56,6 +56,7 @@ $scaleLG: 1.25 !default;
 $focusOutlineColor: transparent !default;
 $focusOutline: 0 none !default;
 $focusOutlineOffset: 0 !default;
+$inputFocusOutlineOffset: $focusOutlineOffset !default;
 $focusShadow: none !default;
 
 //action icons
@@ -213,6 +214,17 @@ $dangerButtonActiveBg: rgba(#d32f2f, 0.68) !default;
 $dangerButtonTextActiveColor: #ffffff !default;
 $dangerButtonActiveBorderColor: transparent !default;
 $dangerButtonFocusShadow: none !default;
+
+$contrastButtonBg:#212121 !default;
+$contrastButtonTextColor:#ffffff !default;
+$contrastButtonBorder:1px solid #212121 !default;
+$contrastButtonHoverBg:#424242 !default;
+$contrastButtonTextHoverColor:$contrastButtonTextColor !default;
+$contrastButtonHoverBorderColor:#424242 !default;
+$contrastButtonActiveBg:#616161 !default;
+$contrastButtonTextActiveColor:$contrastButtonTextColor !default;
+$contrastButtonActiveBorderColor:#616161 !default;
+$contrastButtonFocusShadow:none !default;
 
 $linkButtonColor: $primaryColor !default;
 $linkButtonHoverColor: $primaryColor !default;
