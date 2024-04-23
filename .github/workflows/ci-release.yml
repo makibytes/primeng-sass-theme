@@ -1,25 +1,34 @@
 name: CI-Release
+
 on:
   push:
     branches: [ release ]
-  release:
-    types: [ published ]
-  workflow_dispatch:
+
+env:
+  GAR_LOCATION: europe-west3-npm.pkg.dev/prod-343209/maki-npm-repo
+  PROJECT_ID: prod-343209
+  REGION: europe-west3
+
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: write
+      contents: 'read'
+      packages: 'write'
+      id-token: 'write'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: Google Auth
+        id: auth
+        uses: 'google-github-actions/auth@v2'
         with:
-          node-version: '20.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@maki'
-      - run: |
+          token_format: 'access_token'
+          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
+          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+
+      - name: "Publish"
+        run: |
           cd ./package
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npm publish --registry=https://${{ env.GAR_LOCATION }}
