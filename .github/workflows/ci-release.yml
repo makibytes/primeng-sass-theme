@@ -37,7 +37,7 @@ jobs:
           always-auth: 'true'
 
       - name: "Publish"
-      - run: |
+        run: |
           cd ./package
           npm publish
           
