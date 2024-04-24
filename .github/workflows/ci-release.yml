@@ -29,7 +29,7 @@ jobs:
           service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
 
       - name: "Generate Access Token"
-        uses: GoogleCloudPlatform/artifact-registry-npm-tools@v1
+        uses: GoogleCloudPlatform/artifact-registry-npm-tools@v3
         with:
           repo: 'projects/prod-343209/locations/europe-west3/repositories/maki-npm-repo'
 
