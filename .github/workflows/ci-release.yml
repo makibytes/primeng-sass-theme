@@ -33,11 +33,12 @@ jobs:
         with:
           node-version: '20'
           registry-url: 'https://${{ env.GAR_LOCATION }}'
-          token: '${{ steps.auth.outputs.access_token }}'
           always-auth: 'true'
 
       - name: "Publish"
         run: |
           cd ./package
           npm publish
+        env: 
+          NODE_AUTH_TOKEN: ${{ steps.auth.outputs.access_token }}
           
